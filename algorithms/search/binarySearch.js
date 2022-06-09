@@ -16,7 +16,7 @@ function binarySearch(sortedArr, target) {
   let start = 0;
   let end = sortedArr.length - 1;
   let middle = Math.floor((start + end) / 2); // 올림 해도 상관없음.
-  while (sortedArr[middle] !== target) {
+  while (sortedArr[middle] !== target && start <= end) {
     // 찾는 수가 중간값보다 작거나 큰 경우의 좌, 우 포인터 재할당
     target < sortedArr[middle] ? (end = middle - 1) : (start = middle + 1);
     middle = Math.floor((start + end) / 2); // 중간값 재할당
@@ -24,4 +24,4 @@ function binarySearch(sortedArr, target) {
   return sortedArr[middle] === target ? middle : -1;
 }
 
-console.log(binarySearch([1, 3, 6, 7, 9, 12, 15, 17, 20, 24, 26, 30], 24));
+console.log(binarySearch([1, 3, 6, 7, 9, 12, 15, 17, 20, 24, 26, 30], 100));
