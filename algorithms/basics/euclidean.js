@@ -14,3 +14,5 @@ function gcd(x, y) {
   if (rest === 0) return y;
   return gcd(y, rest);
 }
+
+// 두 수 중에서 큰 수를 구하는 과정을 생략할 수 있다.
