@@ -35,19 +35,20 @@ class SinglyLinkedList {
     // this.head = null;
     // this.tail = null;
     this.currentNode = undefined; // 현재 노드
-    this.countData = 0; // 현재 데이터 수
+    this.dataLength = 0; // 현재 데이터 수
   }
   // length 인스턴스 메서드: 현재 데이터 개수 확인
   length() {
-    return this.countData;
+    return this.dataLength;
   }
   // append 인스턴스 메서드: 마지막에 요소 추가
   append(data) {
     let newNode = new Node(data);
     this.tail.next = newNode; // 노드 생성 시 해당 노드가 다음 노드를 가리키도록 함.
     this.tail = newNode;
-    this.countData += 1;
+    this.dataLength += 1;
   }
+  showData() {}
 }
 
 const list = new SinglyLinkedList();
@@ -62,3 +63,31 @@ console.log(list); // SinglyLinkedList {head: Node, tail: Node, currentNode: un
 // currentNode: undefined
 // head: Node {data: 'head', next: Node}
 // tail: Node {data: 85, next: null}
+
+/**
+ SinglyLinkedList {head: Node, tail: Node, currentNode: undefined, countData: 5}
+countData: 5
+currentNode: undefined
+
+head: Node
+data: "head"
+next: Node
+
+data: 1
+next: Node
+
+data: 15
+next: Node
+
+data: 24
+next: Node
+
+data: 7
+next: Node
+
+data: 85
+next: null
+
+tail: Node {data: 85, next: null}
+[[Prototype]]: Object
+ */
