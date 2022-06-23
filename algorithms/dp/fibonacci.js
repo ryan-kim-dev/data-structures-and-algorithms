@@ -8,7 +8,7 @@
 // 3. 아예 독립된 변수로 만들어도 된다.
 function fib(n, memo = [undefined, 1, 1]) {
   if (memo[n] !== undefined) return memo[n];
-  if (n <= 2) return 1;
+  //   if (n <= 2) return 1; -> 필요가 없어짐. memo 배열에 초기값이 있으므로!
   let result = fib(n - 1, memo) + fib(n - 2, memo);
   memo[n] = result;
   return result;
