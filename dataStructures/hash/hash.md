@@ -140,6 +140,17 @@ guestArr.forEach(item => {
 });
 ```
 
+- key 값을 일반 객체와 달리 어떤 자료형이든 사용할 수 있음. key 값으로 객체나 함수도 가능.
+- Map 객체를 생성하며 인수 전달 시 키-값 쌍의 **이터러블** 만 가능. 키 중복 시 값이 덮어씌워지므로 중복된 키를 갖는 요소가 존재할 수 없음.
+- 이터러블하므로 forEach문 사용 가능.
+- Map객체의 메서드와 프로퍼티
+  - size: 요소 개수 확인 프로퍼티. \*size 는 메서드가 아니라 프로퍼티다.
+  - set : 요소 추가 메서드. (key 값과 value 값 지정)
+  - get : 요소 취득 메서드. (Map 객체의 key값을 인수로 입력하여 해당 key의 value를 반환)
+  - has : 요소 존재 여부 확인 메서드. (Map 객체에 지정된 요소가 있는지 여부를 boolean 값으로 반환)
+  - delete : 요소 삭제 메서드.
+  - clear : 요소 일괄 삭제 메서드.
+
 ### 참고자료
 
 - [유데미 자바스크립트 자료구조 & 알고리즘](https://www.udemy.com/course/best-javascript-data-structures/learn/lecture/28561799#overview)
